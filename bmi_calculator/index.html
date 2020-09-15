@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="./assets/css/style.css">
+</head>
+<body onkeydown="handlePress()">
+    <h1>BMI Calculator</h1>
+    <select id="method">
+        <option value="metric">Metric</option>
+        <option value="imperial">Imperial</option>
+    </select>
+<input type="text" id="weight" placeholder="Your weight in kilogram">
+<input type="text" id="height" placeholder="Your height in cm">
+<button id="calculate">calculate</button>
+<div id="results"></div>
+<script src="./assets/js/bmi.js"></script>
+ <script src="./assets/js/bmi_ui.js"></script>
+<script>
+    const handlePress = () => {
+        if (event.keyCode === 13) {
+
+            calculateBmi()
+        }
+    }
+</script>
+</body>
+</html>
